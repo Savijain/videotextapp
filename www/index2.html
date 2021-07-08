@@ -29,7 +29,7 @@
 		<script defer src="vue.min.js"></script>
 		<script defer src="app.js"></script>
 		<script defer src="script.js"></script>
-		<title>Talk - Free group video call for the web</title>
+		<title>Video chat app</title>
 		<!-- Below line is an alytics script. Delete it if you are deploying it on your own cloud  -->
 		<script async defer src="https://stats.usetalk.io/hello.js"></script>
 	</head>
@@ -39,30 +39,13 @@
 		<main id="app" v-bind:style="'display:block'">
 			<div id="intro" v-if="showIntro && !showChat && !showSettings">
 				<p>
-					<strong>Talk</strong> is a free & open-source video conference app for the web. <br />Works in all major
-					browsers. No signups. No downloads. 100% peer-to-peer.
+					<strong>WELCOME!!!!</strong> 
 				</p>
-				<p>
-					<small>
-						<i>Share this link to start talking. </i><br />
-						<span class="roomLink">{{roomLink}}</span>
-						<a class="copyURL" href="javascript:void(0)" v-on:click="copyURL">{{copyText || "Copy"}}</a>
-					</small>
-				</p>
-				<div class="footer">
-					<iframe
-						src="https://ghbtns.com/github-btn.html?user=vasanthv&repo=talk&type=star&count=true"
-						frameborder="0"
-						scrolling="0"
-						width="150"
-						height="20"
-						title="GitHub"
-					></iframe>
-					<a href="/legal.html" class="terms light"><small>Terms</small></a>
-				</div>
+				
+			
 			</div>
 
-			<div id="chatWrap" v-if="showChat">
+			<div id="chatWrap" v-if="showChat" >
 				<div id="chats">
 					<div class="chat" v-for="(chat, i) in chats" v-bind:key="i">
 						<span class="name">{{chat.name}}</span>
@@ -115,25 +98,51 @@
 				</div>
 			</div>
 
-			<div id="actionsWrap" v-bind:class="hideToolbar ? 'hidden' : ''">
+			<div id="actionsWrap" class="vertical-menu" v-bind:class="hideToolbar ? 'hidden' : ''">
 				<div id="actions">
+					
 					<button v-bind:class="'icon-mic'+(audioEnabled ? '' : '-off')" v-on:click="audioToggle"></button>
-					<button v-bind:class="'icon-video'+(videoEnabled ? '' : '-off')" v-on:click="videoToggle"></button>
+					<br>
+					<button v-bind:class="'icon-video'+(videoEnabled ? '' : '-off')" v-on:click="videoToggle"></button><br>
 					<button
 						v-bind:class="'icon-message-square '+(showChat ? 'active' : '')"
 						v-on:click="showChat = !showChat"
 					></button>
+					<br>
 					<button
 						v-bind:class="'icon-monitor '+(screenshareEnabled ? 'active' : '')"
 						v-on:click="screenShareToggle"
 					></button>
+					<br>
 					<button
 						v-bind:class="'icon-more-horizontal '+(showSettings ? 'active' : '')"
 						v-on:click="showSettings = !showSettings"
 					></button>
-                    <a href="index3.html" class="button">hang up</a>
+					<br>
+					<button id="myBtn">
+						<img src="https://image.flaticon.com/icons/png/512/61/61093.png" width="22px" height="22px">
+					</button>
 				</div>
 			</div>
+			<!-- The Modal -->
+<div id="myModal" class="modal">
+
+	<!-- Modal content -->
+	<div class="modal-content">
+	  <span class="close">&times;</span>
+	  <p style="font-size: 28px;color:#663500 ; ">
+		<strong><i>Hello!!!</i></strong> <i>Hope you have a great time using this app.</i>
+	</p>
+	<p style="font-size: 28px;color:#331a00">
+		<small>
+			<i>Share this link to start talking. </i><br />
+			<span class="roomLink">{{roomLink}}</span>
+			<a class="copyURL" href="javascript:void(0)" v-on:click="copyURL">{{copyText || "Copy"}}</a>
+		</small>
+	</p>
+	</div>
+  
+  </div>
 		</main>
 	</body>
 </html>
