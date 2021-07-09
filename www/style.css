@@ -11,7 +11,7 @@ body {
 	line-height: 1.6;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background: #fff;
+	background:#d9f393;
 }
 input {
 	display: block;
@@ -30,17 +30,25 @@ input {
 	height: 50vh;
 	overflow: hidden;
 	position: relative;
+	border: 0.005px solid #ECECEC;
 }
 .video.one {
-	width: 100vw;
-	height: 100vh;
+	width: 90vw;
+	height: 90vh;
+	margin-top: 20px;
+	margin-left: 90px;
+	margin-right: 90px;
 }
 .video.two {
-	width: 50vw;
-	height: 100vh;
+	
+	width: 45vw;
+	height: 90vh;
+	margin-top: 20px;
+	margin-left: 40px;
+	margin-right: 30px;
 }
 .video.three {
-	width: 33.33vw;
+	width: 32.85vw;
 	height: 100vh;
 }
 .video.four {
