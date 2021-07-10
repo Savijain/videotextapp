@@ -21,17 +21,6 @@ Because it's developed with WebRTC, all video, audio, and text chat is peer-to-p
 
 App will be running on http://localhost:3000 for you. 
 
-### Built With
+### LICENSE
 
-HTML
-CSS 
-JAVASCRIPT
-WEBRTC
-NODE JS
-
-### List of features
-  Video call
-  Screen sharing
-  Text Chat
-  Full screen mode
-  
+<a href="https://github.com/vasanthv/talk/blob/master/LICENSE">MIT License</a>
