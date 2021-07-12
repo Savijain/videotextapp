@@ -21,7 +21,7 @@ Because it's developed with WebRTC, all video, audio, and text chat is peer-to-p
 
 App will be running on http://localhost:3000 for you. 
 
-###Live app
+### Link of live app
 
 This project is deployed at https://videoandchat.herokuapp.com/
 
